@@ -62,8 +62,6 @@ pdf_project1/
 ├── README.md                    # Main project readme
 
 
-
-
 ## 🔑 Key Files Explained
 
 ### Backend Files
@@ -135,12 +133,79 @@ You'll know everything is working when:
 - PDFs are generated with ReportLab library
 - All data is stored in MongoDB
 
----
+----------
+```
+
+### ▶️ Running the Project
+
+### Step 1: Start MongoDB
+
+**Windows:**
+- MongoDB should start automatically as a service
+- Or start manually from Services
+
+**Mac/Linux:**
+```bash
+sudo systemctl start mongod
+```
+
+### Step 2: Start Backend Server
+
+Open a terminal and run:
+
+```bash
+cd backend
+venv\Scripts\activate  # Windows
+# or
+source venv/bin/activate  # Mac/Linux
+
+python app.py
+```
+
+**Expected output:**
+```
+ * Running on http://127.0.0.1:5000
+ * Debug mode: on
+```
+
+**Verify backend is running:**
+- Open browser: `http://localhost:5000/`
+- Should see: "Server is running and connected to MongoDB!"
+
+### Step 3: Start Frontend Server
+
+Open a **new terminal** and run:
+
+```bash
+cd frontend/PdfGeneratorApp
+npm start
+```
+
+**Expected output:**
+```
+› Metro waiting on expo://192.168.x.x:8081
+› Scan the QR code above with Expo Go (Android) or the Camera app (iOS)
+```
+
+### Step 4: Access the Application
+
+**Option A: Web Browser**
+- Press `w` in the Expo terminal
+- Or open: `http://localhost:8081`
+
+**Option B: Android Emulator**
+- Press `a` in the Expo terminal
+- Ensure Android emulator is running
+
+**Option C: iOS Simulator (Mac only)**
+- Press `i` in the Expo terminal
+- Ensure Xcode is installed
+
+**Option D: Physical Device**
+- Install Expo Go app
+- Scan QR code from terminal
+- Ensure device and computer are on same network
+```
 
 **Last Updated**: December 2025
 **Version**: 1.0.0
-
-
-
-
-
